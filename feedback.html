@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yes or No Tracker</title>
+</head>
+<body>
+  <h1>Do you like this website?</h1>
+  <button id="yesButton">Yes</button>
+  <button id="noButton">No</button>
+
+  <script>
+    const webhookUrl = "https://discord.com/api/webhooks/1323697029825958038/ACKCq-iwKSH6hXwT_GOEiIZuM7ybEToqYcEm7CHdRaT57GQoKz2fsyjU3AmScUWgWWUX"; // Replace with your webhook URL
+
+    // Function to send a message to Discord
+    function sendToDiscord(message) {
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: message // Message content sent to Discord
+        })
+      })
+      .then(response => console.log('Sent to Discord:', response))
+      .catch(error => console.error('Error sending to Discord:', error));
+    }
+
+    // Add event listeners to buttons
+    document.getElementById('yesButton').addEventListener('click', () => {
+      sendToDiscord("User clicked YES!");
+    });
+
+    document.getElementById('noButton').addEventListener('click', () => {
+      sendToDiscord("User clicked NO!");
+    });
+  </script>
+</body>
+</html>
