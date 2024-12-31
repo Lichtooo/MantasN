@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yes or No Tracker</title>
+  <title>Tep or Nou Tracker</title>
 </head>
 <body>
   <h1>Do you like this website?</h1>
-  <button id="yesButton">Yes</button>
-  <button id="noButton">No</button>
+  <button id="yesButton">Tep</button>
+  <button id="noButton">Nou</button>
 
   <script>
     const webhookUrl = "https://discord.com/api/webhooks/1323697029825958038/ACKCq-iwKSH6hXwT_GOEiIZuM7ybEToqYcEm7CHdRaT57GQoKz2fsyjU3AmScUWgWWUX"; // Replace with your webhook URL
@@ -28,11 +28,11 @@
 
     // Add event listeners to buttons
     document.getElementById('yesButton').addEventListener('click', () => {
-      sendToDiscord("User clicked YES!");
+      sendToDiscord("User clicked Tep!");
     });
 
     document.getElementById('noButton').addEventListener('click', () => {
-      sendToDiscord("User clicked NO!");
+      sendToDiscord("User clicked Nou!");
     });
   </script>
 </body>
