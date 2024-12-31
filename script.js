@@ -46,7 +46,7 @@ function generateMessage(noCount) {
     "Tikaraai?",
     "Pookie please",
     "Don't do this to me :(",
-    "Dauzai man sirdi",
+    "Youre breaking my heart",
     "Eisiu paverkt i kampa...",
   ];
 
